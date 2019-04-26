@@ -42,13 +42,16 @@
 
       </div><!-- /.wrap content -->
 
-      <footer role="contentinfo">
-        <div class="wrap">
-          <p>{{site.data.translations[page.lang].built-by}} <a href="{{ site.data.translations[page.lang].cds-snc-url }}">{{ site.data.translations[page.lang].cds-snc}}</a>.</p>
-          <p><a href="https://github.com/cds-snc/cds-accessibility-handbook-alpha">{{site.data.translations[page.lang].contribute}}.</a></p>
-          <p>{{site.data.translations[page.lang].hosting}} <a href="http://pages.github.com/">GitHub Pages</a>.</p>
+      <footer class="site-footer" role="contentinfo">
+          <div class="wrap">
+            <div class="github-nav">
+                <a href="{{ site.baseurl}}/nav-tips/" class="button button-nav-tips">Navigation tips</a>
+              <a class="button button-edit" href="https://github.com/edit/">Edit this page</a>
+                <a class="button button-issue" href="https://github.com/{{ site.github.organization }}/{{ site.github.repository }}/issues/">File an issue</a>
+            </div>
         </div><!--/.wrap -->
       </footer>
+
     </div> <!-- /.container -->
     {% if site.offline_cache == true %}
       <script>
