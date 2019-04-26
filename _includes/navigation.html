@@ -1,7 +1,5 @@
-<h2>Accessibility Charter</h2>
+<h2 class="heading-label">Accessibility Charter</h2>
 <p>{{ site.data.translations[page.lang].charter }}</p>
-<h2>Table of content</h2>
-
 {% assign mydocs = site.pages | where:"lang","en" | where:"layout","page" | group_by: 'category' %}
 {% for cat in mydocs %}
 <h3>{{ cat.name | capitalize }}</h3>
