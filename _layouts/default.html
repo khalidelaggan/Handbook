@@ -11,7 +11,6 @@
       {% endif %}
     </title>
     <meta name="viewport" content="width=device-width">
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic,300italic,300|Source+Sans+Pro:200,300,300italic,400,400italic,600,600italic,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/normalize.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css">
@@ -29,7 +28,7 @@
             <img class="logo" src="{{ site.logourl }}" alt="{{ site.logoalt }}">
           {% endif %}
           <h1 class="site-title"><a class="title-link" href="{{ site.baseurl }}{{ site.data.translations[page.lang].homepage-slug }}">{{site.data.translations[page.lang].site-name }}</a></h1>
-          <h2 class="float-right"><a class="toggle" href="{{ site.baseurl }}{{ page.trans_url }}">{{ site.data.translations[page.lang].language }}</a></h2>
+          <h2 class="float-right"><a href="{{ site.baseurl }}{{ page.trans_url }}">{{ site.data.translations[page.lang].language }}</a></h2>
         </div>
       </header>
 
@@ -42,16 +41,14 @@
         </section>
 
       </div><!-- /.wrap content -->
-      <footer class="site-footer" role="contentinfo">
-          <div class="wrap">
-            <div class="github-nav">
-                <a href="{{ site.baseurl}}/nav-tips/" class="button button-nav-tips">Navigation tips</a>
-              <a class="button button-edit" href="https://github.com/edit/">Edit this page</a>
-                <a class="button button-issue" href="https://github.com/{{ site.github.organization }}/{{ site.github.repository }}/issues/">File an issue</a>
-            </div>
+
+      <footer role="contentinfo">
+        <div class="wrap">
+          <p>{{site.data.translations[page.lang].built-by}} <a href="{{ site.data.translations[page.lang].cds-snc-url }}">{{ site.data.translations[page.lang].cds-snc}}</a>.</p>
+          <p><a href="https://github.com/cds-snc/cds-accessibility-handbook-alpha">{{site.data.translations[page.lang].contribute}}.</a></p>
+          <p>{{site.data.translations[page.lang].hosting}} <a href="http://pages.github.com/">GitHub Pages</a>.</p>
         </div><!--/.wrap -->
       </footer>
-
     </div> <!-- /.container -->
     {% if site.offline_cache == true %}
       <script>
